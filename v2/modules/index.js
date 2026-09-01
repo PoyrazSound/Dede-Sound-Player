@@ -1,8 +1,11 @@
-const make=(id,name,description)=>({id,name,description,test(log){log.textContent=`MODÜL ${id}: ${name}\nTest kanalı hazır. MIDI + bağımsız ses motoru sonraki aşamada bağlanacak.`;}});
+import { module3 } from './03-voice-engine/index.js';
+
+const make=(id,name,description)=>({id,name,description,test(log){log.textContent=`MODÜL ${id}: ${name}\nTest kanalı hazır.`;}});
+
 export const modules=[
 make(1,'Core / Audio Engine','Web Audio ana motoru'),
 make(2,'Sample Manager','HDD/disk sample erişimi ve önbellek'),
-make(3,'Voice Engine','Poly/mono voice yönetimi'),
+module3,
 make(4,'Legato + Portamento/Glide','Legato ve gerçek pitch glide'),
 make(5,'Mapping Engine','Key/velocity mapping'),
 make(6,'Velocity Layer','Velocity katman seçimi'),
